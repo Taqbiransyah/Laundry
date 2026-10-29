@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gangga Laundry | Bersih, Wangi, Rapi</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf9fd;--surface:#fff;--text:#2a2433;--muted:#675f73;--line:#e6dff0;--brand:#7a4db3;--brandtext:var(--brand);--soft:#f1eaf9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17131d;--surface:#211b29;--text:#f1edf6;--muted:#aaa2b8;--line:#342b40;--soft:#241d2f;--brandtext:#c4a3ee;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17131d;--surface:#211b29;--text:#f1edf6;--muted:#aaa2b8;--line:#342b40;--soft:#241d2f;--brandtext:#c4a3ee;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font:800 1.15rem "Bricolage Grotesque",sans-serif;color:var(--brandtext);text-decoration:none}
+nav a{margin-left:8px;padding:8px 16px;border-radius:99px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.93rem;transition:background .2s,color .2s}
+nav a:hover{background:var(--soft);color:var(--text)}
+nav a.on{background:var(--brand);color:#fff}
+h2.flash{animation:fl 1.3s;border-radius:8px}
+@keyframes fl{0%{background:color-mix(in srgb,var(--brand) 28%,transparent)}100%{background:transparent}}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem Figtree,sans-serif;background:var(--brand);color:#fff;padding:12px 22px;border-radius:12px;text-decoration:none}
+.btn.alt{background:none;color:var(--text);border:1.5px solid var(--line)}
+:focus-visible{outline:3px solid var(--brandtext);outline-offset:2px}
+.hero{padding:48px 20px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,7vw,4rem);font-weight:800;letter-spacing:-.02em;color:var(--brandtext)}
+.hero .tag{font:600 1.15rem "Bricolage Grotesque",sans-serif;margin:10px 0 6px}
+.hero p{color:var(--muted);max-width:44ch;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.photos{margin:0}.band{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:44px 20px}.band h2{margin-bottom:10px}.band .lead{max-width:40ch;margin:0}
+.photos figure{margin:0;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--soft);border:1px solid var(--line);display:grid;place-items:center;position:relative}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos svg{width:46%;color:var(--brandtext)}
+.photos figcaption{position:absolute;left:0;right:0;bottom:0;padding:6px 10px;font-size:.8rem;background:color-mix(in srgb,var(--bg) 80%,transparent);color:var(--muted)}
+.stat{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;background:var(--soft);font-weight:600;font-size:.9rem;margin:0 0 16px}
+.stat::before{content:"";width:9px;height:9px;border-radius:50%;background:#1a8f4a}
+.stat.tutup::before{background:#c0362c}
+.mapbox{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--soft);aspect-ratio:16/9}
+.mapbox iframe{width:100%;height:100%;border:0}
+.loc{display:grid;grid-template-columns:1fr 1.3fr;gap:24px;align-items:start}
+.loc .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.qa{border-bottom:1px solid var(--line);padding:14px 0}
+.qa summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:hover{color:var(--brandtext)}
+.qa p{margin:6px 0 0;color:var(--muted);max-width:62ch}
+.stform{display:flex;gap:10px;flex-wrap:wrap}.stform input{flex:1;min-width:200px}
+section{padding:40px 0}
+.tint{background:var(--soft)}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:6px}
+.lead{color:var(--muted);margin:0 0 20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:8px 20px}
+.box h3{padding:14px 0 4px;font-size:1.2rem}
+.row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border:0}
+.row b{color:var(--brandtext);white-space:nowrap}
+.row small{color:var(--muted);display:block}
+.note{padding:12px 0 14px;color:var(--muted);font-size:.9rem}
+.jemput{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start}
+form{display:grid;gap:12px}
+label{font-weight:600;font-size:.92rem;display:grid;gap:5px}
+input,select,textarea{font:inherit;color:var(--text);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+.chk{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;font-weight:400}
+.chk label{display:flex;gap:8px;align-items:center;font-weight:400}
+.chk input{width:auto}
+.err{color:#c0362c;font-size:.9rem;min-height:1.2em}
+footer{border-top:1px solid var(--line);padding:22px 0 90px;color:var(--muted);font-size:.9rem;text-align:center}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#1a8f4a;color:#fff;padding:13px 20px;border-radius:99px;font-weight:600;text-decoration:none;box-shadow:0 8px 20px -8px rgba(0,0,0,.5);z-index:6}
+@media(max-width:760px){.two,.jemput,.hero,.band,.loc{grid-template-columns:1fr}nav a{margin-left:6px;padding:7px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}h2.flash{animation:none}nav a{transition:none}}
+</style>
+</head>
+<body>
+<!-- PANDUAN EDIT: semua data ada di objek C pada <script> paling bawah (nama, WA, harga, area jemput, foto). -->
+<header><div class="wrap"><a class="logo" href="#" id="logo"></a>
+<nav><a href="#harga">Harga</a><a href="#jemput">Antar jemput</a></nav></div></header>
+<main>
+<div class="wrap hero">
+  <div><div class="stat" id="stat"></div><h1 id="h1"></h1><div class="tag" id="tag"></div>
+  <p id="sub"></p>
+  <div class="cta"><a class="btn" href="#jemput">Pesan antar jemput</a><a class="btn alt" href="#harga">Lihat harga</a></div>
+  </div>
+  <div class="photos" id="p0"></div>
+</div>
+<div class="wrap band"><div class="photos" id="p1"></div><div><h2 id="b1h"></h2><p class="lead" id="b1t"></p></div></div>
+<section id="harga" class="tint"><div class="wrap">
+  <h2>Daftar harga</h2><p class="lead" id="slogan"></p>
+  <div class="two">
+    <div class="box"><h3>Harga kiloan</h3><div id="kg"></div></div>
+    <div class="box"><h3>Layanan lain</h3><div id="lain"></div><div class="note" id="lainnote"></div></div>
+  </div>
+</div></section>
+<div class="wrap band"><div><h2 id="b2h"></h2><p class="lead" id="b2t"></p></div><div class="photos" id="p2"></div></div>
+<section id="jemput"><div class="wrap jemput">
+  <div>
+    <h2>Antar jemput</h2>
+    <p class="lead" id="area"></p>
+    <p id="jam" style="color:var(--muted)"></p>
+    <p><b id="hp"></b></p>
+  </div>
+  <form id="f" novalidate>
+    <label>Nama<input id="nama" autocomplete="name"></label>
+    <label>Alamat jemput<textarea id="alamat" rows="2" placeholder="Nama jalan, RT/RW, patokan"></textarea></label>
+    <label>Layanan kiloan<select id="lay"></select></label>
+    <div><b style="font-size:.92rem">Layanan lain (jika ada)</b><div class="chk" id="chk"></div></div>
+    <label>Jam jemput<select id="jamj"><option>Pagi (07.00-11.00)</option><option>Siang (11.00-15.00)</option><option>Sore (15.00-19.00)</option></select></label>
+    <label>Catatan<textarea id="cat" rows="2" placeholder="Misal: pisahkan baju putih, alergi pewangi"></textarea></label>
+    <div class="err" id="err" role="alert"></div>
+    <div class="err" id="tnote" style="color:var(--muted)"></div>
+    <button class="btn" type="submit">Kirim permintaan via WhatsApp</button>
+  </form>
+</div></section>
+<section id="status" class="tint"><div class="wrap">
+  <h2>Cek status cucian</h2><p class="lead">Masukkan nomor nota atau nama Anda, lalu kami balas lewat WhatsApp.</p>
+  <form class="stform" id="sf" novalidate><input id="nota" placeholder="Nomor nota atau nama" aria-label="Nomor nota atau nama"><button class="btn" type="submit">Cek via WhatsApp</button></form>
+</div></section>
+<section id="lokasi"><div class="wrap loc">
+  <div><h2>Lokasi kami</h2><p class="lead" id="alamatt"></p><p id="jam2" style="color:var(--muted);margin:0"></p>
+  <div class="acts"><a class="btn" id="arah" target="_blank" rel="noopener" href="#">Petunjuk arah</a><a class="btn alt" id="tt" target="_blank" rel="noopener" href="#">TikTok kami</a></div></div>
+  <div class="mapbox"><iframe id="peta" title="Peta lokasi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div></section>
+<section id="faq" class="tint"><div class="wrap">
+  <h2>Pertanyaan umum</h2><p class="lead">Jawaban singkat untuk hal yang sering ditanyakan.</p>
+  <div id="faqs"></div>
+</div></section>
+</main>
+<footer id="foot"></footer>
+<a class="wa" id="wafl" href="#">Chat WhatsApp</a>
+<script>
+// ====== DATA USAHA: edit di sini ======
+const C={
+ nama:"Cleanlab",wa:"6288803253655",hp:"0888-0325-3655",
+ tag:"Bersih · Wangi · Rapi",slogan:"Harga terjangkau, kualitas terpercaya.",
+ sub:"Laundry kiloan dan satuan. Cucian bersih maksimal, wangi tahan lama, bisa dijemput dan diantar.",
+ area:"Melayani area Siwalankerto, Wonocolo, dan sekitarnya.",
+ alamat:"Siwalankerto V No.27, Siwalankerto, Kec. Wonocolo, Surabaya, Jawa Timur 60236",
+ tiktok:"https://www.tiktok.com/@indraazwazea",
+ buka:"07:00",tutup:"21:00",libur:[], // libur: 0=Minggu, 1=Senin, ... 6=Sabtu. Contoh: libur:[0]
+ jam:"Jam jemput: setiap hari. Hubungi kami untuk jadwal khusus.",
+ // foto: isi src dengan alamat file (misal "foto/mesin.jpg"). Kosong = tampil ilustrasi sementara.
+ foto:[{src:"foto1.png",ic:"t"},
+  {src:"foto2.png",ic:"w",h:"Mesin dan peralatan yang terawat",t:"Mesin cuci, pengering, dan setrika dirawat rutin supaya pakaian Anda bersih dan aman."},
+  {src:"foto3.png",ic:"b",h:"Bersih maksimal, wangi tahan lama",t:"Setiap cucian dilipat rapi, diberi pewangi, lalu diantar ke rumah Anda sesuai jadwal."}],
+ // kiloan: [nama, harga per kg, lama pengerjaan]
+ kiloan:[["Cuci basah",3000,"1 hari"],["Cuci lipat",4000,"1-2 hari"],["Cuci setrika",5000,"2 hari"],["Setrika saja",4000,"1 hari"],["Setrika express",5000,"1 hari"]],
+ lain:[["Boneka","Mulai 10.000"],["Sepatu anak","15.000"],["Sepatu dewasa","15.000"],["Sepatu khusus putih","20.000"],["Tas","Mulai 10.000"],["Selimut","10.000"],["Seprai","10.000"],["Bedcover sedang","25.000"],["Bedcover besar","30.000"],["Tikar","25.000"],["Karpet","Harga menyesuaikan"],["Hordeng","Harga menyesuaikan"]],
+ lainnote:"Harga satuan dalam rupiah. Karpet dan hordeng dihitung sesuai ukuran.",
+ faq:[
+  ["Berapa lama cucian selesai?","Lama pengerjaan tertera di daftar harga. Cuci setrika biasanya 2 hari, sedangkan setrika express selesai dalam 1 hari."],
+  ["Apa itu cuci basah?","Pakaian dicuci dan dibilas bersih, lalu diserahkan dalam keadaan basah tanpa dikeringkan dan disetrika. Cocok jika Anda ingin menjemur sendiri."],
+  ["Bagaimana cara menghitung berat cucian?","Cucian ditimbang saat dijemput, jadi Anda tidak perlu menebak berat. Harga dihitung dari hasil timbangan."],
+  ["Apakah pakaian putih dan berwarna dicuci terpisah?","Ya. Pakaian putih dan berwarna dipisah supaya tidak luntur. Tulis permintaan khusus di kolom catatan saat memesan."],
+  ["Bagaimana jika ada pakaian rusak atau hilang?","Segera hubungi kami lewat WhatsApp saat cucian diterima, agar bisa diperiksa bersama dan dicari solusinya."],
+  ["Berapa ongkos antar jemput?","Untuk area terdekat bisa ditanyakan lewat WhatsApp. Ongkir menyesuaikan jarak lokasi Anda."],
+  ["Bagaimana cara membayar?","Pembayaran bisa tunai atau transfer saat cucian diantar."]
+ ]
+};
+// =======================================
+const $=i=>document.getElementById(i),E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rp=n=>"Rp"+n.toLocaleString("id-ID");
+const ICON={
+ t:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 24l5-14h38l5 14M8 24c0 5 4 7 8 7s8-2 8-7c0 5 4 7 8 7s8-2 8-7c0 5 4 7 8 7s8-2 8-7M12 31v23h40V31"/><rect x="26" y="38" width="12" height="16"/></svg>',
+ w:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="10" y="6" width="44" height="52" rx="6"/><circle cx="32" cy="36" r="13"/><path d="M24 36c3-3 5 3 8 0s5 3 8 0"/><circle cx="19" cy="14" r="2"/><circle cx="26" cy="14" r="2"/></svg>',
+ b:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 28h48l-6 26H14z"/><path d="M18 28c0-10 6-16 14-16s14 6 14 16M24 36v10M32 36v10M40 36v10"/></svg>',
+ s:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="14" cy="46" r="7"/><circle cx="50" cy="46" r="7"/><path d="M21 46h22l-4-22h-8M12 32h10l3 14M44 24l6-6h5"/><rect x="26" y="14" width="12" height="9" rx="2"/></svg>'};
+document.title=C.nama+" | "+C.tag;
+$("logo").textContent=C.nama;$("h1").textContent=C.nama;$("tag").textContent=C.tag;$("sub").textContent=C.sub;
+$("slogan").textContent=C.slogan;$("area").textContent=C.area;$("jam").textContent=C.jam;$("hp").textContent="WhatsApp: "+C.hp;
+$("lainnote").textContent=C.lainnote;$("foot").innerHTML="© 2026 "+E(C.nama)+". "+E(C.tag)+". <a href=\""+E(C.tiktok)+"\" target=\"_blank\" rel=\"noopener\">TikTok</a>";
+const wa="https://wa.me/"+C.wa;$("wafl").href=wa+"?text="+encodeURIComponent("Halo "+C.nama+", saya mau tanya.");
+C.foto.forEach((f,i)=>{$("p"+i).innerHTML=`<figure>${f.src?`<img src="${E(f.src)}" alt="${E(f.cap||"")}">`:ICON[f.ic]}${f.cap?`<figcaption>${E(f.cap)}</figcaption>`:""}</figure>`;const im=$("p"+i).querySelector("img");if(im)im.onerror=()=>{im.outerHTML=ICON[f.ic]}});
+[1,2].forEach(i=>{$("b"+i+"h").textContent=C.foto[i].h;$("b"+i+"t").textContent=C.foto[i].t});
+$("kg").innerHTML=C.kiloan.map(k=>`<div class="row"><span>${E(k[0])}<small>Selesai ${E(k[2])}</small></span><b>${rp(k[1])}/kg</b></div>`).join("");
+$("lain").innerHTML=C.lain.map(k=>`<div class="row"><span>${E(k[0])}</span><b>${E(k[1])}</b></div>`).join("");
+$("lay").innerHTML=C.kiloan.map(k=>`<option>${E(k[0])} (${rp(k[1])}/kg)</option>`).join("");
+$("chk").innerHTML=C.lain.map((k,i)=>`<label><input type="checkbox" value="${E(k[0])}">${E(k[0])}</label>`).join("");
+$("f").addEventListener("submit",e=>{
+ e.preventDefault();
+ const n=$("nama").value.trim(),a=$("alamat").value.trim();
+ if(!n||!a){$("err").textContent="Isi nama dan alamat jemput dulu.";return}
+ $("err").textContent="";
+ const x=[...document.querySelectorAll("#chk input:checked")].map(i=>i.value).join(", ")||"-";
+ const m=["*Permintaan Antar Jemput - "+C.nama+"*","Nama: "+n,"Alamat jemput: "+a,"Layanan: "+$("lay").value,"Berat: ditimbang saat jemput","Layanan lain: "+x,"Jam jemput: "+$("jamj").value,"Catatan: "+($("cat").value.trim()||"-")].join("\n");
+ const u=wa+"?text="+encodeURIComponent(m);
+ $("err").innerHTML='Jika WhatsApp belum terbuka, <a href="'+u+'" target="_blank" rel="noopener">klik di sini</a>.';
+ window.open(u,"_blank");
+});
+const fm=m=>{const[h,mm]=m.split(":");return +h*60+ +mm};
+function cekBuka(){
+ const p=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Jakarta",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()),g=t=>p.find(x=>x.type===t).value;
+ const d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday")),mnt=(+g("hour")%24)*60+ +g("minute");
+ const o=!C.libur.includes(d)&&mnt>=fm(C.buka)&&mnt<fm(C.tutup);
+ const s=$("stat");s.classList.toggle("tutup",!o);
+ s.textContent=o?"Buka sekarang, tutup pukul "+C.tutup.replace(":","."):"Sedang tutup, buka pukul "+C.buka.replace(":",".");
+ $("tnote").textContent=o?"":"Di luar jam buka, pesan tetap terkirim dan kami balas saat buka.";
+}
+cekBuka();setInterval(cekBuka,60000);
+$("alamatt").textContent=C.alamat;
+$("jam2").textContent="Buka pukul "+C.buka.replace(":",".")+" sampai "+C.tutup.replace(":",".")+" WIB";
+const pq=encodeURIComponent(C.alamat);
+$("peta").src="https://www.google.com/maps?q="+pq+"&output=embed";
+$("arah").href="https://www.google.com/maps/dir/?api=1&destination="+pq;
+$("tt").href=C.tiktok;
+$("faqs").innerHTML=C.faq.map(f=>`<details class="qa"><summary>${E(f[0])}</summary><p>${E(f[1])}</p></details>`).join("");
+$("sf").addEventListener("submit",e=>{e.preventDefault();const v=$("nota").value.trim();if(!v){$("nota").focus();return}window.open(wa+"?text="+encodeURIComponent("Halo "+C.nama+", saya mau cek status cucian. Nomor nota/nama: "+v),"_blank")});
+const links=[...document.querySelectorAll("nav a")];
+const mark=id=>links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+id));
+links.forEach(a=>a.addEventListener("click",()=>{const id=a.getAttribute("href").slice(1);mark(id);const h=document.querySelector("#"+id+" h2");if(h){h.classList.remove("flash");void h.offsetWidth;h.classList.add("flash")}}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)mark(e.target.id)}),{rootMargin:"-40% 0px -55% 0px"});
+["harga","jemput"].forEach(i=>io.observe($(i)));
+addEventListener("scroll",()=>{if(scrollY<150)mark("")},{passive:true});
+</script>
+</body>
+</html>
